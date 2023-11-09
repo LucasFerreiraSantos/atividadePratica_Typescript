@@ -8,7 +8,14 @@ function average(num1, num2) {
         return objeto;
     }
     else if (averageFinal < 6) {
-        return { averageF: averageFinal, situation: false };
+        const objeto = {
+            averageF: averageFinal,
+            situation: false
+        };
+        return objeto;
     }
 }
-average(10, 9);
+console.log(average(6, 5));
+// 1. Crie uma função que receba 2 números e retorne um objeto
+// contendo a média e também um indicador booleano de
+// aprovado/reprovado. Considere aprovado com média >= 6.
