@@ -1,4 +1,4 @@
-type Director = {
+export type Director = {
     name: string;
     age: number;
     commission: number;
