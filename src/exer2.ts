@@ -1,36 +1,17 @@
 type gradesWeights = [
-    {
-        nota: number;
-        peso: number
-    },
-    {
-        nota: number;
-        peso: number
-    },
-    {
-        nota: number;
-        peso: number
-    }
+    { note: number, weight: number },
+    { note: number, weight: number },
+    { note: number, weight: number }
 ]
 
 const list: gradesWeights = [
-    {
-        nota: 10,
-        peso: 3
-    },
-    {
-        nota: 8,
-        peso: 5
-    },
-    {
-        nota: 9,
-        peso: 2
-    }
+    { note: 10, weight: 3 },
+    { note: 8, weight: 5 },
+    { note: 9, weight: 2 }
 ]
 
-function averageWeights(list: gradesWeights){
-    const finalGrade: number = (list[0].nota * list[0].peso) + (list[1].nota * list[1].peso) + (list[2].nota * list[2].peso) / 3
-    return finalGrade
+function averageWeights(list: gradesWeights): number {
+    return (list[0].note * list[0].weight) + (list[1].note * list[1].weight) + (list[2].note * list[2].weight) / 3
 }
 
 console.log(`A média final baseada no peso é: `,averageWeights(list))
