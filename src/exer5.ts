@@ -1,4 +1,26 @@
+type User = {
+    name: string;
+    age: number;
+    occupation: string;
+    wage?: number | string;
+}
 
+function createUser(User: { name: string, age: number, occupation: string, wage?: number | string }): User {
+    if(User.wage === undefined) {
+        User.wage = "N/A"
+    }
+
+    const employee: User = {
+        name: User.name,
+        age: User.age,
+        occupation: User.occupation,
+        wage: User.wage
+    }
+
+    return employee
+}
+
+console.log(createUser({name: "Lucas", age: 25, occupation: "Logística" }))
 
 // 5. Crie um programa para mostrar informações de usuários (User) de
 // uma empresa. Crie o tipo User com as seguintes propriedades:
