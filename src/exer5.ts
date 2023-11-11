@@ -20,7 +20,8 @@ function createUser(User: { name: string, age: number, occupation: string, wage?
     return employee
 }
 
-console.log(createUser({name: "Lucas", age: 25, occupation: "Logística" }))
+const user = createUser({name: "Lucas", age: 25, occupation: "Logística" })
+console.log(`O Funcionário ${user.name} tem ${user.age} anos, trabalha com ${user.occupation} e possui um salário de ${user.wage}`)
 
 // 5. Crie um programa para mostrar informações de usuários (User) de
 // uma empresa. Crie o tipo User com as seguintes propriedades:
