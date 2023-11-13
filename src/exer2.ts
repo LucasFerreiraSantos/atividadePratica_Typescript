@@ -4,17 +4,25 @@ type gradesWeights = [
     { note: number, weight: number }
 ]
 
-const list: gradesWeights = [
+let listGradesWeight: gradesWeights = [
     { note: 10, weight: 3 },
     { note: 8, weight: 5 },
     { note: 9, weight: 2 }
 ]
 
-function averageWeights(list: gradesWeights): number {
-    return (list[0].note * list[0].weight) + (list[1].note * list[1].weight) + (list[2].note * list[2].weight) / 3
+function averageWeights(listGradesWeight): number {
+    let dividend: number = 0
+    let divisor: number = 0
+
+    listGradesWeight.forEach((value: gradesWeights, index: number): void => {
+        dividend += value[index].note * value[index].weight
+        divisor++
+    })
+
+    return dividend / divisor
 }
 
-console.log(`A média final baseada no peso é: `,averageWeights(list))
+console.log(averageWeights(listGradesWeight))
 
 // 2. Crie uma função que receba uma lista de objetos contendo nota e
 // peso, realize a média das notas considerando o peso. Exemplos:
